@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Чаты</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            display: flex;
+            width: 100%;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            max-width: 768px;
+            background-color: #FFFFFF;
+        }
+
+        header {
+            height: 50px;
+            background-color: #95afd2ac;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+        }
+
+        header p {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+            line-height: 30px;
+            color: white;
+            font-size: 20px;
+        }
+
+        header img {
+            height: 30px;
+        }
+
+        main {
+            width: 100%;
+            background-color: #eff6fe;
+            min-height: calc(100vh - 50px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chatItem {
+            width: 100%;
+            height: 80px;
+            border-bottom: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 8px 16px;
+            gap: 10px;
+        }
+
+        .chatAvatar {
+            height: 64px;
+            width: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .chatBody {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .chatUserName {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .chaLastMessage {
+            font-weight: 400;
+            font-size: 14px;
+            color: #333333;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+
+        .chatTime {
+            font-family: "Open Sans", sans-serif;
+            font-size: 12px;
+            color: #666666;
+            white-space: nowrap;
+        }
+        .chatItem {
+            width: 100%;
+            height: 80px;
+            border-bottom: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease; /* Добавили плавность */
+        }
+
+        .chatItem:hover {
+            background-color: #b5bdc7; /* Цвет при наведении */
+        }
+    </style>
+
+    <body>
+        <header>
+            <img src="/images/logotype.jpg" alt="Логотип">
+            <p>чаты</p>
+        </header>
+
+        <main>
+            <a href="dialog.html" style="text-decoration: none; color: inherit;">
+                <div class="chatItem">
+                    <img class="chatAvatar" src="/images/img1.webp">
+                    <div class="chatBody">
+                        <p class="chatUserName">Путин</p>
+                        <p class="chaLastMessage">Привет родной, как делишки, VPN используешь?</p>
+                    </div>
+                    <p class="chatTime">18:40</p>
+                </div>
+            </a>
+
+            <div class="chatItem">
+                <img class="chatAvatar" src="/images/IMG_0739.jpeg" alt="Аватар">
+                <div class="chatBody">
+                    <p class="chatUserName">Максим</p>
+                    <p class="chaLastMessage">Бро, а логотип до завтра успеешь?</p>
+                </div>
+                <p class="chatTime">17:25</p>
+            </div>
+
+            <div class="chatItem">
+                <img class="chatAvatar" src="/images/IMG_0009.jpeg" alt="Аватар">
+                <div class="chatBody">
+                    <p class="chatUserName">Мама</p>
+                    <p class="chaLastMessage">Сынок, не забудь покушать и оденься потеплее!</p>
+                </div>
+                <p class="chatTime">16:10</p>
+            </div>
+        </main>
+    </body>
+</html>
