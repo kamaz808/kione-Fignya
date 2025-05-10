@@ -7,170 +7,50 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet"
     </head>
-
-    <style>
-        /*
-            Убираем предустановки браузера, делаем так,
-            чтобы во всех браузерах, все отображалось одинаково.
-         */
-        * {
-            margin: 0; /* Убирает отступы вокруг всех элементов */
-            padding: 0; /* Убирает отступы внутри всех элементов */
-            box-sizing: border-box; /* Отступы не будут изменять размеры элементов */
-        }
-
-        html {
-            display: flex; /* Определяет поведение вложенных блоков при компановке экрана */
-            width: 100%; /* Определяет длинну всегда равной 100% экрана */
-            height: auto; /* Определяет высоту экрана, адаптивной под размер контента */
-            align-items: center; /* Выравнивание вложенных элементов по вертикали экрана */
-            justify-content: center; /* Выравнивание вложенных элементов по горизонтали экрана */
-        }
-
-        body {
-            display: flex;
-            flex-direction: column; /* Порядок расположения элементов в контейнере */
-            width: 85%; /* Наш сайт будет занимать 85% от ширины экрана */
-            max-width: 768px; /* Максимальная ширина (не может быть больше 768px) */
-            background-color: #FFFFFF;
-        }
-
-        header {
-            height: 50px; /* Высота */
-            background-color: #95afd2ac; /* Цвет фона */
-            width: 100%; /* Длина */
-            padding: 10px; /* Вутренний отступ */
-            display: flex; /* Позиционирование элементов флекс контейнером */
-            flex-direction: row; /* Направление расположения элементов в строку */
-            gap: 20px; /* внутренний отступ между элементами внутри flex */
-        }
-
-        header p {
-            font-family: "Open Sans", sans-serif; /* Выбор шрифта */
-            font-weight: 700; /* Толщина шрифта */
-            font-style: normal; /* Начертание */
-            line-height: 30px; /* Высота линии, автоматически центрует текст вертикально */
-            color: white;
-        }
-
-        header img {
-            height: 30px;  /* Высота */
-        }
-
-        main {
-            width: 100%;  /* Длина */
-            background-color: #eff6fe;  /* Цвет фона */
-             /*
-                Вычисляем минималную высоту для main с учетом того,
-                что наша шапка занимает 50px по высоте, а 100vh возвращает 
-                высоту экрана в пикселях. Таким образом у нас не будет полосы прокрутки
-             */
-            min-height: calc(100vh - 50px);
-        }
-
-        .mainForm {
-            display: flex;
-            flex-direction: column; /* Выстраивание элементов по вертикали */
-            gap: 10px; /* Внутренний отступ между всеми элементами */
-        }
-
-        main {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        h1 {
-            font-family: "Open Sans", sans-serif; /* Выбор шрифта */
-            font-weight: 700; /* Толщина шрифта */
-            font-size: 28px;
-            margin-bottom: 10px; /* Отступ снизу */
-        }
-
-        label {
-            font-family: "Open Sans", sans-serif; /* Выбор шрифта */
-            font-weight: 400; /* Толщина шрифта */
-            font-size: 18px;
-        }
-
-        input {
-            width: 300px;
-            height: 40px;
-            border-radius: 4px; /* Радиус скругления углов */
-            border: solid 2px #999999; /* Чёрная рамка толщиной 1px */
-
-            outline: none; /* Отключает встроенную стилизаацию рамки */
-            padding-left: 15px;
-            padding-right: 15px;
-            font-family: "Open Sans", sans-serif; /* Выбор шрифта */
-            font-weight: 600; /* Толщина шрифта */
-            font-size: 16px;
-
-        }
-        
-        input:focus {
-            border: solid 2px #2592c8; /* Синяя рамка толщиной 1px */
-        }
-
-        button {
-            width: 300px;
-            height: 40px;
-            margin-top: 20px; /* Отступ сверху */
-            outline: none;
-            background-color: #b9c6ce;
-            border: none;
-            border: 1px solid #788288;
-            border-radius: 6px;
-            cursor: pointer;
-            color: #FFFFFF;
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        button:hover {
-            background-color: #bfdbeb;
-        }
-
-        .chatItem {
-            width: 100%;
-            height: 80px;
-            border-bottom: 1px solid black;
-            display: flex;
-            flex-direction: row;
-            padding-left: 16px;
-            padding-right: 16px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-        }
-
-        .chatAvatar {
-            height: 80px;
-            padding: 10px;
-            width: 80px;
-            border-radius: 80px;
-            object-fit: cover;
-            overflow: hidden;
-            display: block;
-
-        }
-
-    </style>
 
     <body>
         <header>
             <img src="/images/logotype.jpg">
-            <p>чаты</p>
+            <p>Чаты</p>
         </header>
         <main>
+           <div class="wrapper">
             <div class="chatItem">
                 <img class="chatAvatar" src="/images/img1.webp">
                 <div class="chatBody">
                     <p class="chatUserName">Путин</p>
-                    <p class="chaLastMessage">Привет родной, как делишки, VPN используешь?</p>
+                    <p class="chatLastMessage">Привет родной, как делишки, VPN используешь?</p>
                 </div>
                 <p class="chatTime">18:40</p>
+           </div>
+           <div class="chatItem">
+            <img class="chatAvatar" src="/images/img1.webp">
+            <div class="chatBody">
+                <p class="chatUserName">Путин</p>
+                <p class="chatLastMessage">Привет родной, как делишки, VPN используешь?</p>
             </div>
+            <p class="chatTime">18:40</p>
+       </div>
+       <div class="chatItem">
+        <img class="chatAvatar" src="/images/img1.webp">
+        <div class="chatBody">
+            <p class="chatUserName">Путин</p>
+            <p class="chatLastMessage">Привет родной, как делишки, VPN используешь?</p>
+        </div>
+        <p class="chatTime">18:40</p>
+   </div>
+   <div class="chatItem">
+    <img class="chatAvatar" src="/images/img1.webp">
+    <div class="chatBody">
+        <p class="chatUserName">Путин</p>
+        <p class="chatLastMessage">Привет родной, как делишки, VPN используешь?</p>
+    </div>
+    <p class="chatTime">18:40</p>
+</div>
+           </div>
+           
         </main>
     </body>
 </html>
